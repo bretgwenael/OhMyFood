@@ -1,5 +1,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
-  font-family: "Shrikhand", sans-serif;
+  margin: 0;
+}
+
+.branding {
+  display: flex;
+  justify-content: center;
+}
+.branding .branding__logo {
+  font-size: 30px;
+  padding: 14px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  background-color: #EAEAEA;
+  padding: 17px;
+}
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+}
+.presentation p:nth-child(1) {
+  font-size: 24px;
+  font-weight: bolder;
+  margin: 0;
+}
+.presentation p:nth-child(1) p:nth-child(2) {
+  font-size: 18px;
+  font-weight: none;
+}
+
+.explor-input {
+  border-radius: 25px;
+  height: 50px;
+  width: 218px;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  margin-top: 10px;
+}
+
+.functioning {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.functioning__box {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  gap: 30px;
+  border-radius: 20px;
+  background: #F6F6F6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+}
+
+span {
+  position: relative;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #9356DC;
+  text-align: center;
+  color: white;
+  line-height: 25px;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background: #F6F6F6;
+}
+.restaurants__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  padding: 20px;
+}
+.restaurants__list __card {
+  box-sizing: border-box;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 15px;
+}
+.restaurants__list__card > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 340px;
+  height: 251px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }/*# sourceMappingURL=styles.css.map */
