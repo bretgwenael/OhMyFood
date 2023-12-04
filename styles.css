@@ -115,10 +115,22 @@ span {
   gap: 5px;
   padding: 15px;
 }
+.restaurants__list__card__text::before {
+  content: "Nouveau";
+  background: #99E2D0;
+  position: absolute;
+  padding: 7px 10px 7px 10px;
+  left: 70%;
+  bottom: 360%;
+  color: #008766;
+  border-radius: 5px;
+}
 .restaurants__list__card__text i {
   position: absolute;
-  left: 90%;
-  font-size: 20px;
+  left: 87%;
+  width: 32px;
+  height: 27px;
+  font-size: 25px;
 }
 .restaurants__list__card__text > * {
   margin: 0;
@@ -160,4 +172,40 @@ span {
   width: 11px;
   height: 13px;
   padding-right: 20px;
+}
+
+/* essai coeur */
+.empty-heart {
+  opacity: 1;
+}
+.empty-heart:hover {
+  animation: opacitychange1 0.5s ease;
+}
+
+.full-heart {
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.full-heart:hover {
+  animation: opacitychange2 0.5s ease forwards;
+}
+
+@keyframes opacitychange1 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes opacitychange2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=styles.css.map */
