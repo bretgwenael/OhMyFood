@@ -50,11 +50,12 @@ a {
         font-size: 24px;
         font-weight: bolder;
         margin: 0;
+    }
         p:nth-child(2) {
             font-size: 18px;
             font-weight: none;
         }
-    }
+    
 }
 
 .explor-input {
@@ -113,56 +114,56 @@ span {
         align-items: center;
         border-radius: 15px;
         padding: 20px;
-
+        
         &__card {
+            position: relative;
             box-sizing: border-box;
             text-decoration: none;
             box-shadow: 0px 4px 15px 0px #0000001A;
             border-radius: 15px;
 
+            &:nth-of-type(-n+2)::before {
+                content: "Nouveau";
+                background: $vert-clair;
+                position: absolute;
+                padding: 7px 10px 7px 10px;
+                color: $vert-fonce;
+                border-radius: 5px;
+                top: 15px;
+                left: 240px;
+            }
+            
+
+            img {
+                object-fit: cover;
+                object-position: center;
+                width: 340px;
+                height: 251px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px; 
+            }
+
+            i {
+                position: absolute;
+                left: 88%;
+                bottom: 10%;
+                font-size: 25px;
+            }
+
             &__text {
                 display: flex;
                 flex-direction: column;
-                position: relative;
                 gap: 5px;
                 padding: 15px;
 
-                &::before {
-                    content: "Nouveau";
-                    background: $vert-clair;
-                    position: absolute;
-                    padding: 7px 10px 7px 10px;
-                    left: 70%;
-                    bottom: 360%;
-                    color: $vert-fonce;
-                    border-radius: 5px;
-                }
-
-                i {
-                position: absolute;
-                left: 87%;
-                width: 32px;
-                height: 27px;
-                font-size: 25px;
+                > * {
+                    margin: 0;
                 }
             }
-
-            &__text > * {
-                margin: 0;
-            }
-        }
-        
-
-        &__card > img{
-            object-fit: cover;
-            object-position: center;
-            width: 340px;
-            height: 251px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
         }
     }
 }
+    
 
 .footer__container {
     background-color: #353535;

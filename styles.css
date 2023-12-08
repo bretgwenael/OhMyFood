@@ -42,7 +42,7 @@ a {
   font-weight: bolder;
   margin: 0;
 }
-.presentation p:nth-child(1) p:nth-child(2) {
+.presentation p:nth-child(2) {
   font-size: 18px;
   font-weight: none;
 }
@@ -103,39 +103,23 @@ span {
   padding: 20px;
 }
 .restaurants__list__card {
+  position: relative;
   box-sizing: border-box;
   text-decoration: none;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   border-radius: 15px;
 }
-.restaurants__list__card__text {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  gap: 5px;
-  padding: 15px;
-}
-.restaurants__list__card__text::before {
+.restaurants__list__card:nth-of-type(-n+2)::before {
   content: "Nouveau";
   background: #99E2D0;
   position: absolute;
   padding: 7px 10px 7px 10px;
-  left: 70%;
-  bottom: 360%;
   color: #008766;
   border-radius: 5px;
+  top: 15px;
+  left: 240px;
 }
-.restaurants__list__card__text i {
-  position: absolute;
-  left: 87%;
-  width: 32px;
-  height: 27px;
-  font-size: 25px;
-}
-.restaurants__list__card__text > * {
-  margin: 0;
-}
-.restaurants__list__card > img {
+.restaurants__list__card img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -144,6 +128,21 @@ span {
   height: 251px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+.restaurants__list__card i {
+  position: absolute;
+  left: 88%;
+  bottom: 10%;
+  font-size: 25px;
+}
+.restaurants__list__card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+}
+.restaurants__list__card__text > * {
+  margin: 0;
 }
 
 .footer__container {
