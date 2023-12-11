@@ -14,6 +14,23 @@ body {
     margin: 0;
 }
 
+p {
+    margin: 0;
+}
+
+span {
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
 nav {
     display: flex;
     justify-content: center;
@@ -25,13 +42,190 @@ nav {
     left: 0;        
     }
 
+    img {
+        padding: 20px;
+    }
+
 }
 
 .restaurant1 {
     
+
     img {
         object-fit: cover;
         object-position: center;
         width: 100%;
     }
 }
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F6F6F6;
+    
+    
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        position: relative;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        i {
+            position: absolute;
+            left: 85%;
+            font-size: 25px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+
+        &__informations {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 0;
+            list-style: none;
+            
+            li {
+                display: flex;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                width: 349px;
+                height: 69px;
+                border-radius: 15px;
+                background: #FFFFFF;
+                box-shadow: 0px 4px 15px 0px #00000026;  
+            }
+
+            li:hover::after {
+                content: "\f058";
+                font-family: "Font Awesome 6 Free";
+                background: $vert-clair;
+                position: relative;
+                font-size: 21px;
+                overflow: hidden;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                padding: 25px 15px 25px 15px;
+                opacity: 0;
+                animation: opacitychange2 0.6s ease forwards;  
+            }
+
+            li:hover .dishes__content__price {
+                transform: translateX(-40px);
+                transition-duration: 0.4s;
+            }
+        }
+    }
+}
+
+.dishes__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 80%;
+    padding: 15px;
+
+    &__name {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    &__description {
+        font-size: 15px;
+        text-overflow: ellipsis;
+    }
+
+    &__price {
+        position:absolute;
+        right: -30px;
+        bottom: 10px;  
+        
+    }
+}
+
+.explor-input {
+    border-radius: 25px;
+    height: 50px;
+    width: 186px;
+    color: white;
+    background: linear-gradient(#FF79DA, #9356DC);
+    border: none;
+    padding: 20px;
+    margin-bottom: 30px;
+} 
+
+.footer__container {
+    background-color: #353535;
+
+    p {
+        padding-left: 22px;
+        padding-top: 25px;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-family: $shrikhand-txt;
+        margin: 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 22px 25px 22px 25px;
+        margin: 0;
+        list-style: none;
+     a {
+        color: white;
+    
+     i {
+        width: 11px;
+        height: 13px;
+       padding-right: 20px; 
+    }
+        } 
+    } 
+}
+
+/* essai coeur */
+
+.empty-heart {
+    opacity: 1;
+    &:hover {
+        animation: opacitychange1 0.5s ease;
+}
+}
+
+.full-heart {
+    background: linear-gradient(to top,#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    &:hover {
+        animation: opacitychange2 0.5s ease forwards;
+}
+}
+
+@keyframes opacitychange1 {
+    from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes opacitychange2 {
+    from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* animation survol plat */
+
