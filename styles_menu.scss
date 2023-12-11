@@ -112,6 +112,7 @@ nav {
                 content: "\f058";
                 font-family: "Font Awesome 6 Free";
                 background: $vert-clair;
+                color: white;
                 position: relative;
                 font-size: 21px;
                 overflow: hidden;
@@ -133,9 +134,24 @@ nav {
 .dishes__content {
     display: flex;
     flex-direction: column;
+    gap: 5px  ;
     position: relative;
     width: 80%;
     padding: 15px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+
+    &:nth-child(1) {
+        animation-delay: 0.7s;
+      }
+    
+    &:nth-child(2) {
+        animation-delay: 1.4s;
+      }
+    
+    &:nth-child(3) {
+        animation-delay: 2s;
+      }
 
     &__name {
         font-size: 18px;
@@ -150,7 +166,7 @@ nav {
     &__price {
         position:absolute;
         right: -30px;
-        bottom: 10px;  
+        bottom: 15px;  
         
     }
 }
@@ -227,5 +243,9 @@ nav {
   to { opacity: 1; }
 }
 
-/* animation survol plat */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
 

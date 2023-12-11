@@ -91,6 +91,7 @@ nav img {
   content: "\f058";
   font-family: "Font Awesome 6 Free";
   background: #99E2D0;
+  color: white;
   position: relative;
   font-size: 21px;
   overflow: hidden;
@@ -108,9 +109,21 @@ nav img {
 .dishes__content {
   display: flex;
   flex-direction: column;
+  gap: 5px;
   position: relative;
   width: 80%;
   padding: 15px;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+.dishes__content:nth-child(1) {
+  animation-delay: 0.7s;
+}
+.dishes__content:nth-child(2) {
+  animation-delay: 1.4s;
+}
+.dishes__content:nth-child(3) {
+  animation-delay: 2s;
 }
 .dishes__content__name {
   font-size: 18px;
@@ -123,7 +136,7 @@ nav img {
 .dishes__content__price {
   position: absolute;
   right: -30px;
-  bottom: 10px;
+  bottom: 15px;
 }
 
 .explor-input {
@@ -200,4 +213,8 @@ nav img {
     opacity: 1;
   }
 }
-/* animation survol plat *//*# sourceMappingURL=styles_menu.css.map */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=styles_menu.css.map */
