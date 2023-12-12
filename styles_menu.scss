@@ -61,7 +61,11 @@ nav {
 .menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    position: relative;
+    top: -70px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
     background: #F6F6F6;
     
     
@@ -97,15 +101,15 @@ nav {
             
             li {
                 display: flex;
-                align-items: center;
+                justify-content: space-between;
                 position: relative;
                 overflow: hidden;
                 cursor: pointer;
-                width: 349px;
-                height: 69px;
+                width: 90%;
                 border-radius: 15px;
                 background: #FFFFFF;
-                box-shadow: 0px 4px 15px 0px #00000026;  
+                box-shadow: 0px 4px 15px 0px #00000026;
+                padding: 15px;  
             }
 
             li:hover::after {
@@ -113,19 +117,27 @@ nav {
                 font-family: "Font Awesome 6 Free";
                 background: $vert-clair;
                 color: white;
-                position: relative;
+                position: absolute;
                 font-size: 21px;
                 overflow: hidden;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
-                padding: 25px 15px 25px 15px;
+                padding: 30px 15px 30px 15px;
+                right: 0;
+                top: 0;
                 opacity: 0;
                 animation: opacitychange2 0.6s ease forwards;  
             }
 
             li:hover .dishes__content__price {
-                transform: translateX(-40px);
+                transform: translate(-50px);
                 transition-duration: 0.4s;
+            }
+
+            li:hover .dishes__content__description {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding-right: 25px;
             }
         }
     }
@@ -134,24 +146,10 @@ nav {
 .dishes__content {
     display: flex;
     flex-direction: column;
-    gap: 5px  ;
-    position: relative;
+    gap: 5px;
     width: 80%;
-    padding: 15px;
-    opacity: 0;
-    animation: fadeIn 3s forwards;
-
-    &:nth-child(1) {
-        animation-delay: 0.7s;
-      }
-    
-    &:nth-child(2) {
-        animation-delay: 1.4s;
-      }
-    
-    &:nth-child(3) {
-        animation-delay: 2s;
-      }
+    text-wrap: nowrap;
+   
 
     &__name {
         font-size: 18px;
@@ -160,13 +158,15 @@ nav {
 
     &__description {
         font-size: 15px;
+        overflow: hidden;
         text-overflow: ellipsis;
+
     }
 
     &__price {
-        position:absolute;
-        right: -30px;
-        bottom: 15px;  
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         
     }
 }
@@ -243,9 +243,5 @@ nav {
   to { opacity: 1; }
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
+
 

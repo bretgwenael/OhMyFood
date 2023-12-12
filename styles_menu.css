@@ -46,7 +46,11 @@ nav img {
 .menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
+  position: relative;
+  top: -70px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
   background: #F6F6F6;
 }
 .menu__header {
@@ -77,53 +81,48 @@ nav img {
 }
 .menu__list__informations li {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  width: 349px;
-  height: 69px;
+  width: 90%;
   border-radius: 15px;
   background: #FFFFFF;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  padding: 15px;
 }
 .menu__list__informations li:hover::after {
   content: "\f058";
   font-family: "Font Awesome 6 Free";
   background: #99E2D0;
   color: white;
-  position: relative;
+  position: absolute;
   font-size: 21px;
   overflow: hidden;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  padding: 25px 15px 25px 15px;
+  padding: 30px 15px 30px 15px;
+  right: 0;
+  top: 0;
   opacity: 0;
   animation: opacitychange2 0.6s ease forwards;
 }
 .menu__list__informations li:hover .dishes__content__price {
-  transform: translateX(-40px);
+  transform: translate(-50px);
   transition-duration: 0.4s;
+}
+.menu__list__informations li:hover .dishes__content__description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 25px;
 }
 
 .dishes__content {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  position: relative;
   width: 80%;
-  padding: 15px;
-  opacity: 0;
-  animation: fadeIn 3s forwards;
-}
-.dishes__content:nth-child(1) {
-  animation-delay: 0.7s;
-}
-.dishes__content:nth-child(2) {
-  animation-delay: 1.4s;
-}
-.dishes__content:nth-child(3) {
-  animation-delay: 2s;
+  text-wrap: nowrap;
 }
 .dishes__content__name {
   font-size: 18px;
@@ -131,12 +130,13 @@ nav img {
 }
 .dishes__content__description {
   font-size: 15px;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .dishes__content__price {
-  position: absolute;
-  right: -30px;
-  bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .explor-input {
@@ -209,11 +209,6 @@ nav img {
   from {
     opacity: 0;
   }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
   to {
     opacity: 1;
   }

@@ -29,11 +29,23 @@ a {
   padding: 17px;
 }
 
+.location-icon {
+  padding-left: 20px;
+}
+
 .search-input {
   justify-content: center;
   background: #EAEAEA;
   border: none;
-  margin-left: 10px;
+  margin-left: 20px;
+}
+.search-input::-moz-placeholder {
+  color: black;
+  font-size: 16px;
+}
+.search-input::placeholder {
+  color: black;
+  font-size: 16px;
 }
 
 .presentation {
@@ -68,7 +80,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
+  padding: 25px;
 }
 .functioning__box {
   display: flex;
@@ -95,23 +107,27 @@ span {
 .restaurants {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   gap: 15px;
   background: #F6F6F6;
   padding-bottom: 100px;
+}
+.restaurants h1 {
+  margin-left: 25px;
 }
 .restaurants__list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 90%;
   gap: 18px;
   align-items: center;
   border-radius: 15px;
-  padding: 20px;
 }
 .restaurants__list__card {
   position: relative;
   box-sizing: border-box;
+  width: 90%;
   text-decoration: none;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   border-radius: 15px;
@@ -123,15 +139,17 @@ span {
   padding: 7px 10px 7px 10px;
   color: #008766;
   border-radius: 5px;
-  top: 5%;
-  left: 70%;
+  top: 0;
+  right: 0;
+  margin-right: 15px;
+  margin-top: 15px;
 }
 .restaurants__list__card img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  width: 340px;
+  width: 100%;
   height: 251px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -220,6 +238,7 @@ span {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 50px 150px 50px 150px;
   }
   .functioning > h1 {
     width: 100%;
@@ -227,13 +246,19 @@ span {
   .functioning__box {
     width: 31%;
   }
+  .restaurants {
+    padding: 50px 150px 50px 150px;
+  }
+  .restaurants h1 {
+    margin-left: 0;
+  }
   .restaurants__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 100px;
     grid-row-gap: 50px;
-    width: 80%;
+    width: 100%;
   }
   .restaurants__list__card img {
     width: 100%;
