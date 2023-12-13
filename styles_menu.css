@@ -16,6 +16,14 @@ h3 {
   font-weight: 300;
   font-size: 16px;
 }
+h3::after {
+  content: "";
+  display: block;
+  background: #99E2D0;
+  width: 40px;
+  height: 3px;
+  margin-top: 7px;
+}
 
 a {
   text-decoration: none;
@@ -43,10 +51,13 @@ nav img {
   width: 100%;
 }
 
+.behind-menu {
+  margin-bottom: -70px;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
-  align-items: left;
   position: relative;
   top: -70px;
   border-top-right-radius: 50px;
@@ -140,14 +151,23 @@ nav img {
 }
 
 .explor-input {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
   border-radius: 25px;
   height: 50px;
   width: 186px;
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1450980392);
   border: none;
   padding: 20px;
   margin-bottom: 30px;
+  transition: opacity 0.3s ease-out;
+}
+.explor-input:hover {
+  opacity: 0.85;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2078431373);
 }
 
 .footer__container {
@@ -178,7 +198,6 @@ nav img {
   padding-right: 20px;
 }
 
-/* essai coeur */
 .empty-heart {
   opacity: 1;
 }
@@ -211,5 +230,33 @@ nav img {
   }
   to {
     opacity: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .menu {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .menu__header {
+    justify-content: center;
+  }
+  .menu__header i {
+    left: 68%;
+  }
+  .menu__list {
+    padding: 20px 100px 20px 100px;
+  }
+  .footer__container {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 30px 25px 30px 25px;
+  }
+  .footer__container p {
+    padding: 0;
+  }
+  .footer__container .footer__container__list {
+    flex-direction: row;
+    padding: 0;
+    margin-right: 100px;
   }
 }/*# sourceMappingURL=styles_menu.css.map */
