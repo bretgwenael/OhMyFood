@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
 }
@@ -12,9 +16,16 @@ span {
   font-weight: bold;
 }
 
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
 h3 {
   font-weight: 300;
   font-size: 16px;
+  margin: 0;
 }
 h3::after {
   content: "";
@@ -101,6 +112,8 @@ nav img {
   background: #FFFFFF;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   padding: 15px;
+  opacity: 0;
+  animation: fadeIn 2.5s ease-in-out forwards;
 }
 .menu__list__informations li:hover::after {
   content: "\f058";
@@ -126,6 +139,42 @@ nav img {
   overflow: hidden;
   text-overflow: ellipsis;
   padding-right: 25px;
+}
+
+.menu__list:nth-of-type(2) .dishes:nth-of-type(1) {
+  animation-delay: 0.4s;
+}
+
+.menu__list:nth-of-type(2) .dishes:nth-of-type(2) {
+  animation-delay: 0.8s;
+}
+
+.menu__list:nth-of-type(2) .dishes:nth-of-type(3) {
+  animation-delay: 1.2s;
+}
+
+.menu__list:nth-of-type(3) .dishes:nth-of-type(1) {
+  animation-delay: 1.7s;
+}
+
+.menu__list:nth-of-type(3) .dishes:nth-of-type(2) {
+  animation-delay: 2.1s;
+}
+
+.menu__list:nth-of-type(3) .dishes:nth-of-type(3) {
+  animation-delay: 2.5s;
+}
+
+.menu__list:nth-of-type(4) .dishes:nth-of-type(1) {
+  animation-delay: 3s;
+}
+
+.menu__list:nth-of-type(4) .dishes:nth-of-type(2) {
+  animation-delay: 3.4s;
+}
+
+.menu__list:nth-of-type(4) .dishes:nth-of-type(3) {
+  animation-delay: 3.8s;
 }
 
 .dishes__content {
@@ -229,6 +278,14 @@ nav img {
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
