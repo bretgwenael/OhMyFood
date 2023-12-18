@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-$violet: #9356DC;
-$bleu-marine: #003A68;
-$bleu-clair: #89C8FA;
-$vert-fonce: #008766;
-$vert-clair: #99E2D0;
+@import "./scss/abstracts/variables";
 
 $roboto-titles-logo: 'Roboto', sans-serif;
 $shrikhand-txt: 'Shrikhand', sans-serif;
@@ -27,8 +23,8 @@ a {
     display: flex;
     justify-content: center;
     .branding__logo {
-        font-size: 30px;
-        padding: 14px;
+        width: 250px;
+        padding: 25px;
     }
 }
 
@@ -270,8 +266,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 1;
-    animation: endloader 3s ease-in-out;
+    z-index: 99;
+    animation: endloader 0.3s ease 3.3s forwards;
 }
 
 .lettre {
@@ -279,7 +275,7 @@ a {
     color: grey;
     font-size: 57px;
     margin-bottom: 150px;
-    animation: flash 3s linear;
+    animation: flash 5s linear infinite forwards;
 }
 
 @keyframes flash {
@@ -298,13 +294,8 @@ a {
 }
 
 @keyframes endloader {
-    0% {
-         opacity: 1;
-        }
-    100% { 
-        opacity: 0;
-        width: auto;
-    }
+    from { opacity: 1; }
+    to { opacity: 0;display: none; }
 }
 
 .lettre:nth-child(1) {
@@ -336,6 +327,21 @@ a {
 
 
 @media (min-width: 1024px) {
+
+    .presentation {
+    
+        p:nth-child(1) {
+            font-size: 40px;
+           
+        }
+            p:nth-child(2) {
+                font-size: 18px;
+                font-weight: none;
+                padding: 20px;
+            }
+        
+    }
+
     .functioning {
         flex-direction: row;
         flex-wrap: wrap;

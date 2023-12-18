@@ -18,8 +18,8 @@ a {
   justify-content: center;
 }
 .branding .branding__logo {
-  font-size: 30px;
-  padding: 14px;
+  width: 250px;
+  padding: 25px;
 }
 
 .search-form {
@@ -250,8 +250,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
-  animation: endloader 0.1s ease-in-out 3.3s 1 forwards;
+  z-index: 99;
+  animation: endloader 0.3s ease 3.3s forwards;
 }
 
 .lettre {
@@ -282,6 +282,7 @@ a {
   }
   to {
     opacity: 0;
+    display: none;
   }
 }
 .lettre:nth-child(1) {
@@ -317,6 +318,14 @@ a {
 }
 
 @media (min-width: 1024px) {
+  .presentation p:nth-child(1) {
+    font-size: 40px;
+  }
+  .presentation p:nth-child(2) {
+    font-size: 18px;
+    font-weight: none;
+    padding: 20px;
+  }
   .functioning {
     flex-direction: row;
     flex-wrap: wrap;

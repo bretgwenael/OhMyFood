@@ -60,6 +60,7 @@ nav img {
   -o-object-position: center;
      object-position: center;
   width: 100%;
+  height: 400px;
 }
 
 .behind-menu {
@@ -86,7 +87,7 @@ nav img {
 }
 .menu__header i {
   position: absolute;
-  left: 85%;
+  left: 93%;
   font-size: 25px;
 }
 .menu__list {
@@ -298,7 +299,7 @@ nav img {
     justify-content: center;
   }
   .menu__header i {
-    left: 68%;
+    left: 72%;
   }
   .menu__list {
     padding: 20px 100px 20px 100px;
