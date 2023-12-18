@@ -270,8 +270,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
-    animation: endloader 0.1s ease-in-out 3.3s 1 forwards;
+    opacity: 1;
+    animation: endloader 3s ease-in-out;
 }
 
 .lettre {
@@ -279,7 +279,7 @@ a {
     color: grey;
     font-size: 57px;
     margin-bottom: 150px;
-    animation: flash 5s linear infinite forwards;
+    animation: flash 3s linear;
 }
 
 @keyframes flash {
@@ -298,8 +298,13 @@ a {
 }
 
 @keyframes endloader {
-    from { opacity: 1;}
-    to { opacity: 0;}
+    0% {
+         opacity: 1;
+        }
+    100% { 
+        opacity: 0;
+        width: auto;
+    }
 }
 
 .lettre:nth-child(1) {
