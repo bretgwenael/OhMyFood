@@ -1,0 +1,39 @@
+.empty-heart {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    &:hover {
+        opacity: 0;
+}
+}
+
+.full-heart {
+    background: linear-gradient(to top,#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    &:hover {
+        opacity: 1;
+        transform: scale(1.09);
+}
+}
+
+@keyframes opacitychange1 {
+    from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes opacitychange2 {
+    from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

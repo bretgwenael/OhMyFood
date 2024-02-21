@@ -1,0 +1,30 @@
+.footer__container {
+    background-color: #353535;
+
+    p {
+        padding-left: 22px;
+        padding-top: 25px;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-family: $shrikhand-txt;
+        margin: 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 22px 25px 22px 25px;
+        margin: 0;
+        list-style: none;
+     a {
+        color: white;
+    
+     i {
+        width: 11px;
+        height: 13px;
+       padding-right: 20px; 
+    }
+        } 
+    } 
+}

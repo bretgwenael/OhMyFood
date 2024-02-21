@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import "./scss/base/reset";
+@import "./scss/utils/variables";
+@import "./scss/components/buttons";
+@import "./scss/base/typography";
+@import "./scss/components/animations";
+@import "./scss/layout/footer";
 
-$violet: #9356DC;
-$bleu-marine: #003A68;
-$bleu-clair: #89C8FA;
-$vert-fonce: #008766;
-$vert-clair: #99E2D0;
 
-$roboto-titles-logo: 'Roboto', sans-serif;
-$shrikhand-txt: 'Shrikhand', sans-serif;
 
 * {
     font-family: $roboto-titles-logo;
@@ -46,6 +43,7 @@ h3 {
         width: 40px;
         height: 3px;
         margin-top: 7px;
+        margin-bottom: 15px;
         
     }
 }
@@ -107,6 +105,8 @@ nav {
         padding-left: 20px;
         padding-right: 20px;
         margin: auto;
+        margin-top: 60px;
+        margin-bottom: 30px;
 
         i {
             position: absolute;
@@ -155,10 +155,14 @@ nav {
                 overflow: hidden;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
-                padding: 30px 15px 30px 15px;
+                padding: 0 15px;
                 right: 0;
                 top: 0;
                 opacity: 0;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                box-sizing: border-box;
                 animation: opacitychange2 0.6s ease forwards;  
             }
 
@@ -171,6 +175,7 @@ nav {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 padding-right: 25px;
+                text-wrap: nowrap;
             }
         }
     }
@@ -218,17 +223,11 @@ nav {
     animation-delay: 3.8s;
 }
 
-
-
-
- 
-
 .dishes__content {
     display: flex;
     flex-direction: column;
     gap: 5px;
     width: 80%;
-    text-wrap: nowrap;
    
 
     &__name {
@@ -253,101 +252,14 @@ nav {
 .explor-input {
     display: block;
     margin: 0 auto;
-    cursor: pointer;
-    border-radius: 25px;
-    height: 50px;
     width: 186px;
-    color: white;
-    background: linear-gradient(#FF79DA, #9356DC);
-    box-shadow: 0px 4px 15px 0px #00000025;
-    border: none;
     padding: 20px;
     margin-bottom: 30px;
     line-height: 100%;
     opacity: 1;
-    transition: opacity 0.3s ease-out;
-
-    &:hover {
-        opacity: 0.85;
-        box-shadow: 0px 4px 15px 0px #00000095;
-        transition: box-shadow 0.4s ease-in-out;
-    }
-} 
-
-.footer__container {
-    background-color: #353535;
-
-    p {
-        padding-left: 22px;
-        padding-top: 25px;
-        color: #FFFFFF;
-        font-size: 18px;
-        font-family: $shrikhand-txt;
-        margin: 0;
-    }
-
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        padding: 22px 25px 22px 25px;
-        margin: 0;
-        list-style: none;
-     a {
-        color: white;
+    @include basic-button;
     
-     i {
-        width: 11px;
-        height: 13px;
-       padding-right: 20px; 
-    }
-        } 
-    } 
-}
-
-
-
-.empty-heart {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    &:hover {
-        opacity: 0;
-}
-}
-
-.full-heart {
-    background: linear-gradient(to top,#FF79DA, #9356DC);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    &:hover {
-        opacity: 1;
-        transform: scale(1.09);
-}
-}
-
-@keyframes opacitychange1 {
-    from { opacity: 1; }
-  to { opacity: 0; }
-}
-
-@keyframes opacitychange2 {
-    from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-
+} 
 
 @media (min-width: 1024px) {
     .menu {
