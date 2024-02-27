@@ -1,3 +1,5 @@
+@import "../utils/variables";
+
 .empty-heart {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
@@ -7,7 +9,7 @@
 }
 
 .full-heart {
-    background: linear-gradient(to top,#FF79DA, #9356DC);
+    background: linear-gradient(to top,$rose, $violet);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
