@@ -1,6 +1,9 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.2 | 20191019
+   License: none (public domain)
+*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -263,6 +266,7 @@ a {
 }
 .presentation p:nth-child(2) {
   font-size: 18px;
+  font-weight: none;
   margin-bottom: 20px;
 }
 
@@ -318,7 +322,7 @@ a {
 .restaurants {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: left;
   gap: 15px;
   background: #F6F6F6;
   padding-bottom: 100px;
@@ -390,6 +394,7 @@ a {
   }
   .presentation p:nth-child(2) {
     font-size: 18px;
+    font-weight: none;
     padding: 20px;
   }
   .functioning {
@@ -438,4 +443,4 @@ a {
     padding: 0;
     margin-right: 100px;
   }
-}
+}/*# sourceMappingURL=styles.css.map */
